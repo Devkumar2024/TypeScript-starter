@@ -127,14 +127,12 @@ function printId(id: number | string) {
 function printIdentity(id: number | string) {
   if (typeof id === "string") {
     console.log(`id is a string : ${id.toUpperCase()}`);
-  }
-  else{
+  } else {
     console.log(`id is a number : ${id}`);
   }
 }
 
 // printIdentity(2004902);
 // printIdentity(`DeBz`);
-
 
 // interface and types
