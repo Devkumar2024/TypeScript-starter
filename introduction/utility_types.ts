@@ -70,12 +70,18 @@ const userRoles: Record<Role, string> = {
 };
 
 // exclude
-type workStatus = 'success'|'failed'|'in progress';
+type workStatus = 'success'|'failed'|'in progress'| null;
 // ek type ki ppt exclude kardo from union type
 type excludeError = Exclude<workStatus, 'failed'>;
 
 const state_1:excludeError = 'in progress';
 // const state_2:excludeError = 'failed'; // will give error
 
-// Extract
+// Extract : used for filtering
+type extractError = Extract<workStatus, 'failed'>;
+const extracterr: extractError = 'failed';
 
+// Non nullable
+type nonnull = NonNullable<workStatus>
+const variable123: nonnull = 'failed'
+// const variable123: nonnull = null null and undefined  gives error
