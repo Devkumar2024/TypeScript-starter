@@ -36,3 +36,18 @@ console.log(updateProfile(profile, { name: "Aman", phone: "8888888888" }));
 console.log(updateProfile(profile, {}));
 // Original is unchanged (spread creates a new object)
 console.log(profile.age); // 22
+
+interface Profile1 {
+    name?: string;
+    age?: number;
+    city?: string;
+}
+
+
+const user1 : Required<Profile1> = {
+    name : `dev`,
+    age :49,
+    city : `Ludhiana`
+}
+console.log(user1);
+

@@ -18,3 +18,4 @@ const Dev : User = {
 console.log(Dev);
 
 console.log(updateUser(Dev, {role:"user", email:"str@hotmail.com"}));
+

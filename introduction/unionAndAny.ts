@@ -15,3 +15,17 @@ for(let order of orders){
 }
 
 console.log(currenOrder);
+
+interface Config {
+    apiUrl: string;
+    version: number;
+}
+
+type ReadonlyConfig = Readonly<Config>;
+
+let user : ReadonlyConfig = {
+    apiUrl: `www.api.1234`,
+    version : 123
+}
+
+// user.version = 234; // error

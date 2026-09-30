@@ -5,7 +5,7 @@ class Person {
   age: number;
 
   // constructor method to initialize class ppts when a new object is created
-  // parametrized constrictor
+  // parametrized constructor
   constructor(name: string, age: number) {
     this.name = name;
     this.age = age;

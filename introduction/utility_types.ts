@@ -85,3 +85,27 @@ const extracterr: extractError = 'failed';
 type nonnull = NonNullable<workStatus>
 const variable123: nonnull = 'failed'
 // const variable123: nonnull = null null and undefined  gives error
+
+
+interface Profile {
+    name?: string;
+    age?: number;
+    city?: string;
+}
+
+// 1. Define a type guard function to check if everything is present
+function makeProfileMandatory(user: Profile): Required<Profile> {
+    if (!user.name || !user.age || !user.city) {
+        throw new Error("Missing required profile fields!");
+    }
+    
+    // Using 'as Required<Profile>' satisfies the return type compiler check
+    return user as Required<Profile>;
+}
+
+// Example Usage:
+const incompleteUser: Profile = { name: "Dev", age: 49 }; 
+// makeProfileMandatory(incompleteUser); // ❌ Throws error: Missing required profile fields!
+
+const validUser: Profile = { name: "Dev", age: 49, city: "Ludhiana" };
+const strictlyRequiredUser = makeProfileMandatory(validUser); //  Valid

@@ -13,9 +13,7 @@ interface ApiResponse<T> {
 
 type PublicUser = Omit<User, "password">;
 
-function getPublicUsers(
-  response: ApiResponse<User[]>
-): PublicUser[] {
+function getPublicUsers (response: ApiResponse<User[]>): PublicUser[] {
   return response.data.map((user) => {
     const { password, ...publicUser } = user;
 

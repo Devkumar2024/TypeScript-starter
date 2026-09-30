@@ -58,3 +58,33 @@ const numberBox = new Box(100);
 console.log(numberBox.getContents());
 const stringBox = new Box(`Dev kumar`);
 console.log(stringBox.getContents());
+
+function getLast<T>(ipArray: T[]): T | undefined {
+  if (ipArray.length === 0) {
+    return undefined;
+  } else {
+    return ipArray[ipArray.length - 1];
+  }
+}
+
+const objectInput = [
+  { id: 1, name: "Alice" },
+  { id: 2, name: "Bob" },
+];
+const emptyInput: number[] = [];
+const arrayInput: number[] = [1, 2, 3, 4, 5, 6, 7, 8];
+const booleanInput: boolean[] = [true, false, true];
+
+console.log(getLast(objectInput));
+console.log(getLast(emptyInput));
+console.log(getLast(arrayInput));
+console.log(getLast(booleanInput));
+
+type Boxx<T> = {
+  value: T;
+};
+const numberBoxx: Boxx<number> = { value: 23 };
+const stringBoxx: Boxx<string> = { value: "Dev kumar" };
+
+console.log(numberBoxx);
+console.log(stringBoxx);

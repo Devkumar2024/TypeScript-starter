@@ -63,3 +63,29 @@ function updatepProd(product: Product, updatedProd: Partial<Product>): Product {
   return { ...product, ...updatedProd };
 }
 console.log(updatepProd(Mechanical, {price:2000}));
+
+interface User {
+    id: number;
+    name: string;
+    email: string;
+    password: string;
+}
+
+function pickedItems(user:User) : Pick<User, "id"  | "email">{
+        const { name, password, ...pciked} = user;
+        return pciked;
+}
+function omitKeys(user:User) : Omit <User, "password">{
+    const {password, ...omitted} = user;
+    return omitted;
+}
+
+const testUser: User = {
+    id: 101,
+    name: "Dev Kumar",
+    email: "dev@example.com",
+    password: "securePassword123"
+};
+console.log(pickedItems(testUser))
+console.log(omitKeys(testUser))
+
