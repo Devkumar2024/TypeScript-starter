@@ -48,8 +48,8 @@ class car1 {
   }
 }
 
-// const newCar = new car1(`wagon`, `small buster`, 2015);
-// console.log(newCar.getmodel());
+const newCar = new car1(`wagon`, `small buster`, 2015);
+console.log(newCar.getmodel());
 
 // inheritence : virasat
 class Animal {
@@ -75,7 +75,7 @@ class Dog extends Animal {
 const Lebra = new Dog("sheru");
 // Lebra.makesound(); // bow bow... grrrrr
 // // if i comment makesound() in DOG class
-// Lebra.makesound(); // Some generic sound...
+Lebra.makesound(); // Some generic sound...
 
 // Abstract Class
 abstract class Shape {
@@ -100,8 +100,8 @@ class Rectangle extends Shape {
   }
 }
 
-// const rect = new Rectangle(45,80);
-// rect.printArea()
+const rect = new Rectangle(45,80);
+ rect.printArea()
 
 // setters and getters
 // more control on class ppts.
