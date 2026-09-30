@@ -14,7 +14,7 @@ Here is what each folder contains:
 |---|---|
 | `introduction/` | Basic TypeScript concepts (types, interfaces, functions, etc.) |
 | `check_prac/` | Small practice scripts to test specific TS features |
-| `clubbed/` | Combined concepts or mini-projects putting multiple ideas together |
+| `clubbed/` | Combined concepts or mini-progs putting multiple ideas together |
 | `tsconfig.json` | The TypeScript compiler configuration for this repo |
 | `.gitignore` | Tells Git which files (like `node_modules`) to ignore |
 | `.gitattributes` | Git configuration for handling file line endings |
